@@ -27,10 +27,10 @@ stages{
     }//stages closing
 post {
   success {
-    sendslacknotifications('currentBuild.result')
+    sendslacknotifications(currentBuild.result)
   }
   failure {
-    sendslacknotifications('currentBuild.result')
+    sendslacknotifications(currentBuild.result)
   }
 }
     
@@ -61,5 +61,5 @@ def sendslacknotifications(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  slackSend (color: colorCode, message: summary,channel: '#project')
+  slackSend (color: colorCode, message: summary,channel: '#project,slacknotification')
 }
