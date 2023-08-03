@@ -5,8 +5,12 @@ node{
     stage('CheckOut'){
         git 'https://github.com/petergill-github-org/java-web-app-docker.git'
     }
+
+/*
     
     stage('Build'){
         sh "${mvnHome}/bin/mvn clean package"
     }
+
+*/
 }
